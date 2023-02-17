@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper
+  PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+  "https://mybatis.org/dtd/mybatis-3-mapper.dtd">
+  
+  <mapper namespace="com.hs.sj.qna.QnaDAO">
+  
+  	<select id="getQnaList" resultType="QnaDTO">
+  		SELECT * FROM QNA
+  	 </select>
+  	 
+  	 <select id="getQnaDetail" parameterType="QnaDTO" resultType="QnaDTO">
+  	 	SELECT * FROM QNA
+  	 	WHERE QNANUM = ${qnaNum}
+  	 </select>
+  	 
+  	 <insert id="setQnaAdd" parameterType="QnaDTO">
+  	 	<selectKey keyProperty="qnaNum" order="BEFORE" resultType="Long">
+  	 		SELECT QNA_SEQ.NEXTVAL FROM DUAL
+  	 	</selectKey>
+  	 	INSERT INTO QNA (QNANUM, QNATITLE, QNADETAIL, QNAWRITER, QNADATE, QNAHIT)
+		VALUES (#{qnaNum}, #{qnaTitle}, #{qnaDetail}, #{qnaWriter}, SYSDATE, 0)
+  	 </insert>
+  		
+  </mapper>

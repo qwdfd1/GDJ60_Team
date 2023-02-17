@@ -5,7 +5,8 @@
 
 	<configuration>
 		<typeAliases>
-			
+			<typeAlias type="com.hs.sj.qna.QnaDTO" alias="QnaDTO"/>
+			<typeAlias type="java.lang.Long" alias="Long"/>
 		</typeAliases>
 	</configuration>
 
