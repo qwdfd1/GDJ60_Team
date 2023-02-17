@@ -32,4 +32,11 @@ public class QnaController {
 		return mv;
 	}
 	
+	@RequestMapping(value = "/add", method = RequestMethod.GET)
+	public ModelAndView setQnaAdd(ModelAndView mv, QnaDTO qnaDTO) throws Exception {
+		mv.setViewName("/qna/add");
+		
+		return mv;
+	}
+	
 }
