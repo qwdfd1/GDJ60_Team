@@ -30,4 +30,12 @@ public class QnaDAO {
 		return sqlSession.update(NAMESPACE+"setQnaHitAdd", qnaDTO);
 	}
 	
+	public int setQnaDelete(QnaDTO qnaDTO) throws Exception {
+		return sqlSession.delete(NAMESPACE+"setQnaDelete", qnaDTO);
+	}
+	
+	public int setQnaUpdate(QnaDTO qnaDTO) throws Exception {
+		return sqlSession.update(NAMESPACE+"setQnaUpdate", qnaDTO);
+	}
+	
 }

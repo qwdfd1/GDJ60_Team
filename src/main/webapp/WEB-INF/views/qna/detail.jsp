@@ -23,8 +23,15 @@
 		<c:otherwise>
 			<h3>존재하지 않는 게시물입니다</h3>
 		</c:otherwise>
-	
 	</c:choose>
+	
+	
+			<a href="./list" class="btn btn-primary">목록으로</a>
+			<a href="./update?qnaNum=${dto.qnaNum}&qnaHit=${dto.qnaHit}" class="btn btn-primary">글 수정</a>
+			<a href="./delete?qnaNum=${dto.qnaNum}" class="btn btn-primary">글 삭제</a>
+			
+			
+
 </div>
 	<c:import url="../template/common_js.jsp"></c:import>
 </body>

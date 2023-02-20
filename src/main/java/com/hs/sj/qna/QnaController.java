@@ -46,4 +46,27 @@ public class QnaController {
 		return mv;
 	}
 	
+	@RequestMapping(value ="/delete", method = RequestMethod.GET)
+	public ModelAndView setQnaDelete(ModelAndView mv, QnaDTO qnaDTO) throws Exception {
+		int result = qnaService.setQnaDelete(qnaDTO);
+		mv.setViewName("redirect:./list");
+		
+		return mv;
+	}
+	
+	@RequestMapping(value = "/update", method = RequestMethod.GET)
+	public ModelAndView setQndUpdate(ModelAndView mv, QnaDTO qnaDTO) throws Exception {
+		mv.addObject("dto", qnaService.getQnaDetail(qnaDTO));
+		mv.setViewName("/qna/update");
+		return mv;
+	}
+	
+	@RequestMapping(value = "/update", method = RequestMethod.POST)
+	public ModelAndView setQndUpdate(QnaDTO qnaDTO) throws Exception {
+		ModelAndView mv = new ModelAndView();
+		qnaService.setQnaUpdate(qnaDTO);
+		mv.setViewName("redirect:./list");
+		return mv;
+	}
+	
 }

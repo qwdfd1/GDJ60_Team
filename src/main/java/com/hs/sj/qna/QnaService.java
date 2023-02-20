@@ -16,12 +16,20 @@ public class QnaService {
 	}
 	
 	public QnaDTO getQnaDetail(QnaDTO qnaDTO) throws Exception {
-			int result = qnaDAO.setQnaHitAdd(qnaDTO);
-				return qnaDAO.getQnaDetail(qnaDTO);
-
+		int result = qnaDAO.setQnaHitAdd(qnaDTO);
+		return qnaDAO.getQnaDetail(qnaDTO);
 	}
 	
 	public int setQnaAdd(QnaDTO qnaDTO) throws Exception {
 		return qnaDAO.setQnaAdd(qnaDTO);
+	}
+	
+	public int setQnaDelete(QnaDTO qnaDTO) throws Exception {
+		return qnaDAO.setQnaDelete(qnaDTO);
+	}
+	
+	public int setQnaUpdate(QnaDTO qnaDTO) throws Exception {
+		
+		return qnaDAO.setQnaUpdate(qnaDTO);
 	}
 }
