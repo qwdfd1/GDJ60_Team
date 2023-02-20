@@ -26,4 +26,8 @@ public class QnaDAO {
 		return sqlSession.insert(NAMESPACE+"setQnaAdd", qnaDTO);
 	}
 	
+	public int setQnaHitAdd(QnaDTO qnaDTO) throws Exception {
+		return sqlSession.update(NAMESPACE+"setQnaHitAdd", qnaDTO);
+	}
+	
 }

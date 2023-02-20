@@ -33,9 +33,16 @@ public class QnaController {
 	}
 	
 	@RequestMapping(value = "/add", method = RequestMethod.GET)
-	public ModelAndView setQnaAdd(ModelAndView mv, QnaDTO qnaDTO) throws Exception {
+	public ModelAndView setQnaAdd(ModelAndView mv) throws Exception {
 		mv.setViewName("/qna/add");
 		
+		return mv;
+	}
+	
+	@RequestMapping(value = "/add", method = RequestMethod.POST)
+	public ModelAndView setQnaAdd(ModelAndView mv, QnaDTO qnaDTO) throws Exception {
+		mv.setViewName("redirect:./list");
+		int result = qnaService.setQnaAdd(qnaDTO);
 		return mv;
 	}
 	

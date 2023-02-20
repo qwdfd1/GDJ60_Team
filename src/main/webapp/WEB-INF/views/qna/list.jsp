@@ -32,7 +32,7 @@
 					
 						<tr>
 								<td>${dto.qnaNum}</td>
-								<td><a href="./detail?qnaNum=${dto.qnaNum}">${dto.qnaTitle}</a></td>
+								<td><a href="./detail?qnaNum=${dto.qnaNum}&qnaHit=${dto.qnaHit}">${dto.qnaTitle}</a></td>
 								<td>${dto.qnaWriter}</td>
 								<td>${dto.qnaDate}</td>
 								<td>${dto.qnaHit}</td>

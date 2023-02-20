@@ -16,7 +16,9 @@ public class QnaService {
 	}
 	
 	public QnaDTO getQnaDetail(QnaDTO qnaDTO) throws Exception {
-		return qnaDAO.getQnaDetail(qnaDTO);
+			int result = qnaDAO.setQnaHitAdd(qnaDTO);
+				return qnaDAO.getQnaDetail(qnaDTO);
+
 	}
 	
 	public int setQnaAdd(QnaDTO qnaDTO) throws Exception {

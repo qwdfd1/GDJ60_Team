@@ -6,7 +6,8 @@
   <mapper namespace="com.hs.sj.qna.QnaDAO">
   
   	<select id="getQnaList" resultType="QnaDTO">
-  		SELECT * FROM QNA
+  		SELECT * FROM QNA 
+  		ORDER BY QNANUM DESC
   	 </select>
   	 
   	 <select id="getQnaDetail" parameterType="QnaDTO" resultType="QnaDTO">
@@ -21,5 +22,10 @@
   	 	INSERT INTO QNA (QNANUM, QNATITLE, QNADETAIL, QNAWRITER, QNADATE, QNAHIT)
 		VALUES (#{qnaNum}, #{qnaTitle}, #{qnaDetail}, #{qnaWriter}, SYSDATE, 0)
   	 </insert>
+  	 
+  	 <update id="setQnaHitAdd" parameterType="QnaDTO">
+  	 	UPDATE QNA SET QNAHIT = #{qnaHit}+1 
+  	 	WHERE QNANUM = #{qnaNum}
+  	 </update>
   		
   </mapper>
