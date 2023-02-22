@@ -3,49 +3,72 @@ package com.hs.sj.qna;
 import java.sql.Date;
 
 public class QnaDTO {
-	private Long qnaNum;
-	private String qnaTitle;
-	private String qnaDetail;
-	private String qnaWriter;
-	private Date qnaDate;
-	private Long qnaHit;
+	private Long num;
+	private String title;
+	private String comments;
+	private String writer;
+	private Date regDate;
+	private Long hit;
+	private Long ref;
+	private Long step;
+	private Long depth;
 	
-	public Long getQnaNum() {
-		return qnaNum;
+	public Long getNum() {
+		return num;
 	}
-	public void setQnaNum(Long qnaNum) {
-		this.qnaNum = qnaNum;
+	public void setNum(Long num) {
+		this.num = num;
 	}
-	public String getQnaTitle() {
-		return qnaTitle;
+	public String getTitle() {
+		return title;
 	}
-	public void setQnaTitle(String qnaTitle) {
-		this.qnaTitle = qnaTitle;
+	public void setTitle(String title) {
+		this.title = title;
 	}
-	public String getQnaDetail() {
-		return qnaDetail;
+	public String getComments() {
+		return comments;
 	}
-	public void setQnaDetail(String qnaDetail) {
-		this.qnaDetail = qnaDetail;
+	public void setComments(String comments) {
+		this.comments = comments;
 	}
-	public String getQnaWriter() {
-		return qnaWriter;
+	public String getWriter() {
+		return writer;
 	}
-	public void setQnaWriter(String qnaWriter) {
-		this.qnaWriter = qnaWriter;
+	public void setWriter(String writer) {
+		this.writer = writer;
 	}
-	public Date getQnaDate() {
-		return qnaDate;
+	public Date getRegDate() {
+		return regDate;
 	}
-	public void setQnaDate(Date qnaDate) {
-		this.qnaDate = qnaDate;
+	public void setRegDate(Date regDate) {
+		this.regDate = regDate;
 	}
-	public Long getQnaHit() {
-		return qnaHit;
+	public Long getHit() {
+		return hit;
 	}
-	public void setQnaHit(Long qnaHit) {
-		this.qnaHit = qnaHit;
+	public void setHit(Long hit) {
+		this.hit = hit;
 	}
+	public Long getRef() {
+		return ref;
+	}
+	public void setRef(Long ref) {
+		this.ref = ref;
+	}
+	public Long getStep() {
+		return step;
+	}
+	public void setStep(Long step) {
+		this.step = step;
+	}
+	public Long getDepth() {
+		return depth;
+	}
+	public void setDepth(Long depth) {
+		this.depth = depth;
+	}
+	
+	
 	
 	
 }

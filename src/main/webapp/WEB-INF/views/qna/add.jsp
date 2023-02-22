@@ -21,14 +21,14 @@
 					<div class="row mb-3">
 					  <label for="exampleFormControlInput2" class="col-sm-1 col-form-label">작성자 </label>
 					  <div class="col-sm-10">
-					  	<input type="text" class="form-control" name="qnaWriter" id="exampleFormControlInput2" >
+					  	<input type="text" class="form-control" name="writer" id="exampleFormControlInput2" >
 					  </div>
 					</div>
 				
 					<div class="row mb-3">
 					  <label for="exampleFormControlInput1" class="col-sm-1 col-form-label">제목</label>
 					  <div class="col-sm-10">
-					  	<input type="text" class="form-control" name="qnaTitle" id="exampleFormControlInput1" placeholder="제목 입력">
+					  	<input type="text" class="form-control" name="title" id="exampleFormControlInput1" placeholder="제목 입력">
 					  </div>
 					</div>
 					
@@ -45,7 +45,7 @@
 	
 					<div class="mb-5">
 					  <label for="exampleFormControlTextarea1" class="form-label">글 내용</label>
-					  <textarea class="form-control" name="qnaDetail" id="exampleFormControlTextarea1" rows="3"></textarea>
+					  <textarea class="form-control" name="comments" id="exampleFormControlTextarea1" rows="3"></textarea>
 					</div>
 					
 					

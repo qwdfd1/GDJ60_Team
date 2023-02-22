@@ -7,34 +7,34 @@
   
   	<select id="getQnaList" resultType="QnaDTO">
   		SELECT * FROM QNA 
-  		ORDER BY QNANUM DESC
+  		ORDER BY NUM DESC
   	 </select>
   	 
   	 <select id="getQnaDetail" parameterType="QnaDTO" resultType="QnaDTO">
   	 	SELECT * FROM QNA
-  	 	WHERE QNANUM = ${qnaNum}
+  	 	WHERE NUM = #{num}
   	 </select>
   	 
   	 <insert id="setQnaAdd" parameterType="QnaDTO">
   	 	<selectKey keyProperty="qnaNum" order="BEFORE" resultType="Long">
   	 		SELECT QNA_SEQ.NEXTVAL FROM DUAL
   	 	</selectKey>
-  	 	INSERT INTO QNA (QNANUM, QNATITLE, QNADETAIL, QNAWRITER, QNADATE, QNAHIT)
-		VALUES (#{qnaNum}, #{qnaTitle}, #{qnaDetail}, #{qnaWriter}, SYSDATE, 0)
+  	 	INSERT INTO QNA (NUM, TITLE, COMMENTS, WRITER, REGDATE, HIT)
+		VALUES (#{num}, #{title}, #{comments}, #{writer}, SYSDATE, 0)
   	 </insert>
   	 
   	 <update id="setQnaHitAdd" parameterType="QnaDTO">
-  	 	UPDATE QNA SET QNAHIT = #{qnaHit}+1 
-  	 	WHERE QNANUM = #{qnaNum}
+  	 	UPDATE QNA SET HIT = #{hit}+1 
+  	 	WHERE NUM = #{num}
   	 </update>
   	 
   	 <update id="setQnaUpdate" parameterType="QnaDTO">
-  	 	UPDATE QNA SET QNATITLE = #{qnaTitle}, QNADETAIL = #{qnaDetail}
-  	 	WHERE QNANUM = #{qnaNum}
+  	 	UPDATE QNA SET TITLE = #{title}, COMMENTS = #{comments}
+  	 	WHERE NUM = #{num}
   	 </update>
   	 
   	 <delete id="setQnaDelete" parameterType="QnaDTO">
-  	 	DELETE QNA WHERE QNANUM = #{qnaNum}
+  	 	DELETE QNA WHERE NUM = #{num}
   	 </delete>
   		
   </mapper>

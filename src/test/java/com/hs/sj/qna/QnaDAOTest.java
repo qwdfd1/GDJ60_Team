@@ -30,7 +30,7 @@ public class QnaDAOTest extends MyTestCase{
 	@Test
 	public void getQnaDetailTest () throws Exception {
 		QnaDTO qnaDTO = new QnaDTO();
-		qnaDTO.setQnaNum(2L);
+		qnaDTO.setNum(2L);
 		assertNotNull(qnaDAO.getQnaDetail(qnaDTO)); 
 			
 	}
@@ -38,10 +38,10 @@ public class QnaDAOTest extends MyTestCase{
 	@Test
 	public void setQnaAddTest() throws Exception {
 		QnaDTO qnaDTO = new QnaDTO();
-		qnaDTO.setQnaTitle("사이즈 문의");
-		qnaDTO.setQnaDetail("더 큰 사이즈 내놔");
-		qnaDTO.setQnaWriter("qwdfd");
-		qnaDTO.setQnaHit(0L);
+		qnaDTO.setTitle("사이즈 문의");
+		qnaDTO.setComments("더 큰 사이즈 내놔");
+		qnaDTO.setWriter("qwdfd");
+		qnaDTO.setHit(0L);
 		
 		assertNotNull(qnaDAO.setQnaAdd(qnaDTO));
 	}

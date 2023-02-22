@@ -21,14 +21,14 @@
 					<div class="row mb-3">
 					  <label for="exampleFormControlInput2" class="col-sm-1 col-form-label">작성자 </label>
 					  <div class="col-sm-10">
-					  	<input type="text" class="form-control" name="qnaWriter" id="exampleFormControlInput2" readonly="readonly" value="${dto.qnaWriter}">
+					  	<input type="text" class="form-control" name="writer" id="exampleFormControlInput2" readonly="readonly" value="${dto.writer}">
 					  </div>
 					</div>
 				
 					<div class="row mb-3">
 					  <label for="exampleFormControlInput1" class="col-sm-1 col-form-label">제목</label>
 					  <div class="col-sm-10">
-					  	<input type="text" class="form-control" name="qnaTitle" id="exampleFormControlInput1" value="${dto.qnaTitle}" placeholder="제목 입력">
+					  	<input type="text" class="form-control" name="title" id="exampleFormControlInput1" value="${dto.title}" placeholder="제목 입력">
 					  </div>
 					</div>
 					
@@ -45,10 +45,10 @@
 	
 					<div class="mb-5">
 					  <label for="exampleFormControlTextarea1" class="form-label">글 내용</label>
-					  <textarea class="form-control" name="qnaDetail" id="exampleFormControlTextarea1" rows="3" >${dto.qnaDetail}</textarea>
+					  <textarea class="form-control" name="comments" id="exampleFormControlTextarea1" rows="3" >${dto.comments}</textarea>
 					</div>
 					
-					<input type="hidden" name="qnaNum" value="${dto.qnaNum}">
+					<input type="hidden" name="num" value="${dto.num}">
 					
 					
 					<div class="row mt-5 mb-3 col-md-1 offset-md-11">

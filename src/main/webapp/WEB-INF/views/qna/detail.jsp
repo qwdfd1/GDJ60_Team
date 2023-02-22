@@ -12,12 +12,12 @@
 <div class="container-fluid my-5">
 	<c:choose>
 		<c:when test="${not empty dto}">
-			<h3>글 번호 : ${dto.qnaNum}</h3>
-			<h3>글 제목 : ${dto.qnaTitle}</h3>
-			<h3>글 내용 : ${dto.qnaDetail}</h3>
-			<h3>작성자 : ${dto.qnaWriter}</h3>
-			<h3>작성날짜 : ${dto.qnaDate}</h3>
-			<h3>조회수 : ${dto.qnaHit}</h3>
+			<h3>글 번호 : ${dto.num}</h3>
+			<h3>글 제목 : ${dto.title}</h3>
+			<h3>글 내용 : ${dto.comments}</h3>
+			<h3>작성자 : ${dto.writer}</h3>
+			<h3>작성날짜 : ${dto.regDate}</h3>
+			<h3>조회수 : ${dto.hit}</h3>
 		</c:when>
 		
 		<c:otherwise>
@@ -27,8 +27,8 @@
 	
 	
 			<a href="./list" class="btn btn-primary">목록으로</a>
-			<a href="./update?qnaNum=${dto.qnaNum}&qnaHit=${dto.qnaHit}" class="btn btn-primary">글 수정</a>
-			<a href="./delete?qnaNum=${dto.qnaNum}" class="btn btn-primary">글 삭제</a>
+			<a href="./update?num=${dto.num}&hit=${dto.hit}" class="btn btn-primary">글 수정</a>
+			<a href="./delete?num=${dto.num}" class="btn btn-primary">글 삭제</a>
 			
 			
 
