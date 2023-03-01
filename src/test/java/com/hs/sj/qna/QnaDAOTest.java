@@ -10,8 +10,8 @@ import org.springframework.test.context.ContextConfiguration;
 import org.springframework.test.context.junit4.SpringJUnit4ClassRunner;
 
 import com.hs.sj.MyTestCase;
-import com.hs.sj.qna.QnaDAO;
-import com.hs.sj.qna.QnaDTO;
+import com.hs.sj.board.qna.QnaDAO;
+import com.hs.sj.board.qna.QnaDTO;
 
 
 public class QnaDAOTest extends MyTestCase{

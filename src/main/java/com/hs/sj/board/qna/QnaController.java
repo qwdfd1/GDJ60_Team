@@ -1,7 +1,9 @@
-package com.hs.sj.qna;
+package com.hs.sj.board.qna;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
+import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.ModelAttribute;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.servlet.ModelAndView;
@@ -10,10 +12,15 @@ import org.springframework.web.servlet.ModelAndView;
 @RequestMapping(value = "/qna/*")
 public class QnaController {
 	
+	@ModelAttribute (name = "boardName")
+	public String getBoardName() {
+		return "qna";
+	}
+	
 	@Autowired
 	private QnaService qnaService;
 	
-	@RequestMapping(value = "/list", method = RequestMethod.GET)
+	@GetMapping("list")
 	public ModelAndView getQnaList(ModelAndView mv) throws Exception {
 		
 		mv.setViewName("/qna/list");
