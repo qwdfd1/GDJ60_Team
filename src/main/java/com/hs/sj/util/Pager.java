@@ -163,7 +163,7 @@ public class Pager {
 	
 	public void makeNum(Long totalPage) {
 		//1. 전체 row의 갯수 구하기
-		this.totalPage = this.getPerPage()/this.getPage()
+		this.totalPage = this.getPerPage()/this.getPage();
 		//2. 총 page의 갯수 구하기
 	}
 	
